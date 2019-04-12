@@ -1,0 +1,165 @@
+body {
+    font: 14px "Century Gothic", Futura, sans-serif;
+    margin: 20px;
+  }
+  
+  ol, ul {
+    padding-left: 30px;
+  }
+  
+  .board-row:after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+  
+  .status {
+    margin-bottom: 10px;
+  }
+  
+  .square {
+    background: #fff;
+    border: 1px solid #999;
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 34px;
+    height: 34px;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 34px;
+  }
+  
+  .square:focus {
+    outline: none;
+  }
+  
+  .kbd-navigation .square:focus {
+    background: #ddd;
+  }
+  
+  .game {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .game-info {
+    margin-left: 20px;
+  }
+  
+  .footer {
+    width: 100%;
+    max-width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 32px;
+    display: flex;
+    margin-bottom: 0px;
+    justify-content: space-around;
+    align-items: stretch;
+  }
+
+  .footerButton {
+    display: inline-block;
+    font-size: 24px;
+    width: 200px;
+    height: 60px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.22) 2px 2px 5px 0px;
+    opacity: 1;
+    color: black;
+    font-weight: 800;
+    text-align: center;
+  }
+
+  .footerButton:focus {
+    outline: none;
+    background-color: rgb(242, 242, 242);
+  }
+
+  .logo {
+    display: flex;
+    width: 240px;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    border-top-style: solid;
+    border-top-width: 8px;
+    border-top-color: black;
+    border-right-style: solid;
+    border-right-width: 8px;
+    border-right-color: black;
+    border-bottom-style: solid;
+    border-bottom-width: 8px;
+    border-bottom-color: black;
+    border-left-style: solid;
+    border-left-width: 8px;
+    border-left-color: black;
+    background-color: white;
+    font-family: "Open Sans", sans-serif;
+    color: black;
+    font-size: 48px;
+    font-weight: 600;
+  }
+
+  .logo:focus {
+    outline: none;
+    background-color: black;
+    color: white;
+  }
+
+  .main {
+    position: absolute;
+    left: 32px;
+    top: 32px;
+    right: 32px;
+    bottom: 92px;
+    display: flex;
+    width: 100%;
+    max-width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: flex-start;
+    background-color: rgb(255, 255, 255);
+}
+
+.left {
+    font-family: Montserrat, sans-serif;
+    color: rgb(26, 27, 31);
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 400;
+    display: block;
+}
+
+.right {
+    position: absolute;
+    left: 300px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.header {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: flex;
+    width: 240px;
+    height: 80px;
+    margin-top: 0px;
+    align-items: center;
+    font-size: 64px;
+    font-weight: 600;
+}
