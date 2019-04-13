@@ -111,6 +111,34 @@ body {
     font-weight: 600;
   }
 
+  .logofilled {
+    display: flex;
+    width: 240px;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    border-top-style: solid;
+    border-top-width: 8px;
+    border-top-color: black;
+    border-right-style: solid;
+    border-right-width: 8px;
+    border-right-color: black;
+    border-bottom-style: solid;
+    border-bottom-width: 8px;
+    border-bottom-color: black;
+    border-left-style: solid;
+    border-left-width: 8px;
+    border-left-color: black;
+    background-color: white;
+    font-family: "Open Sans", sans-serif;
+    color: black;
+    font-size: 48px;
+    font-weight: 600;
+    outline: none;
+    background-color: black;
+    color: white;
+  }
+
   .logo:focus {
     outline: none;
     background-color: black;
@@ -162,4 +190,119 @@ body {
     align-items: center;
     font-size: 64px;
     font-weight: 600;
+}
+
+.content {
+    position: absolute;
+    left: 0px;
+    top: 80px;
+    right: 0px;
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    align-self: auto;
+    order: 0;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+}
+
+.listcolumn {
+    position: static;
+    left: 0px;
+    top: auto;
+    right: 0%;
+    bottom: 0%;
+    display: flex;
+    width: 800px;
+    height: 72px;
+    margin-top: -1px;
+    margin-right: 0px;
+    margin-left: 0px;
+    padding-left: 0px;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: black;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: black;
+}
+
+.listtext {
+    display: flex;
+    justify-content: flex-start;
+    border-top-style: none;
+    border-top-width: 1px;
+    border-top-color: black;
+    border-bottom-style: none;
+    border-bottom-width: 1px;
+    border-bottom-color: black;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.w-3 {
+    width: 33.33333333%;
+}
+
+.w-6 {
+    width: 66.66666667%;
+}
+
+.serviceimage {
+    position: static;
+    left: 0%;
+    top: 0%;
+    right: auto;
+    bottom: auto;
+    display: block;
+    width: 440px;
+    height: 280px;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: visible;
+}
+
+.Noimage {
+    background-image: url(./noimage.png);
+  }
+
+.servicetitle {
+    margin-top: 16px;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.servicedescription {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.phrase {
+    position: absolute;
+    align-self: auto;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    font-size: 48px;
+    line-height: 64px;
+    font-weight: 800;
+    text-align: center;
+    text-decoration: none;
+}
+
+.barbell {
+    position: absolute;
+        right: 16px;
+        bottom: 10%;
 }

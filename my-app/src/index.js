@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import noimage from './noimage.png';
+import barbell from './barbell.png';
 
 class App extends React.Component {
     constructor(props) {
@@ -8,7 +10,9 @@ class App extends React.Component {
         this.state = {
             buttonStates: Array(6).fill(false),
             headers: ["", "about", "service", "news", "recruit", "contact"],
-            header: "akihiro",
+            header: "",
+            contents: [<Top/>, <About/>, <Service/>, <News/>, <Recruit/>, <Contact/>],
+            content: <Top/>,
         };
     }
 
@@ -18,6 +22,7 @@ class App extends React.Component {
         this.setState({
             buttonStates: buttonStates,
             header: this.state.headers[i],
+            content: this.state.contents[i],
         });
     }
 
@@ -26,6 +31,7 @@ class App extends React.Component {
             <div>
                 <Main 
                     header={this.state.header}
+                    content={this.state.content}
                     onClick={(i) => this.handleClick(i)}
                 />
                 <Footer 
@@ -49,21 +55,18 @@ class Main extends React.Component {
                     <Header 
                         value={this.props.header}
                     />
+                    {this.props.content}
+                    {/* <Top /> */}
+                    {/* <About /> */}
+                    {/* <Service /> */}
+                    {/* <News /> */}
+                    {/* <Recruit /> */}
+                    {/* <Contact /> */}
                 </div>
             </div>
         );
     }
 }
-
-// class Logo extends React.Component {
-//     render() {
-//         return (
-//             <button className="logo" onClick={props.onCLick}>
-//                 Loremy
-//             </button>
-//         )
-//     }
-// }
 
 function Logo(props) {
     return (
@@ -81,6 +84,118 @@ class Header extends React.Component {
             </div>
         );
     }
+}
+
+class ListColumn extends React.Component {
+    render() {
+        return (
+            <div className="listcolumn">
+                <div className="w-3">
+                    <div className="listtext">
+                        {this.props.title}
+                    </div>
+                </div>
+                <div className="w-6">
+                    <div className="listtext">
+                        {this.props.value}
+                    </div>
+                </div>
+            </div>
+        );
+    }
+}
+
+function Top(props) {
+    return (
+        <div className="content">
+            <div className="phrase">
+            LIFT HEAVY <br />
+            UNTIL IT'S NOT <br />
+            HEAVY ANYMORE.
+            </div>
+            <img className="barbell" src={barbell}/>
+        </div>
+    )
+}
+
+function About(props) {
+    return (
+        <div className="content"> 
+            <ListColumn
+                title={"会社名"}
+                value={"株式会社Loremy"}
+            />
+            <ListColumn
+                title={"代表者"}
+                value={"小久保彰博"}
+            />
+            <ListColumn
+                title={"設立"}
+                value={"2019年4月9日"}
+            />
+            <ListColumn
+                title={"事業内容"}
+                value={"インターネットサービスの企画・開発・運営"}
+            />
+            <ListColumn
+                title={"所在地"}
+                value={"京都市下京区烏丸通仏光寺下ル大政所町680-1"}
+            />          
+        </div>
+    );
+}
+
+function Service(props) {
+    return (
+        <div className="content">
+            <div>
+                <img className="serviceimage" src={noimage}/>
+                <div className="servicetitle">
+                    Loremy
+                </div>
+                <div className="servicedescription">
+                    1人では筋トレが続かない人のためのアプリ
+                </div>
+            </div>
+        </div>
+    );
+}
+
+function News(props) {
+    return (
+        <div className="content"> 
+            <ListColumn
+                title={"5/10"}
+                value={"アプリリリース"}
+            />
+            <ListColumn
+                title={"4/9"}
+                value={"設立"}
+            />          
+        </div>
+    );
+}
+
+function Recruit(props) {
+    return (
+        <div className="content">
+            <div className="listtext">
+                現在、採用は行っておりません
+            </div>
+        </div>
+    )
+}
+
+function Contact(props) {
+    return (
+        <div className="content">
+            <div className="listtext">
+                info@loremy.co.jp
+                <br></br>
+                上記のメールアドレスまでお問い合わせください
+            </div>
+        </div>
+    )
 }
 
 class Footer extends React.Component {
